@@ -30,18 +30,24 @@ export default function Navbar() {
   return (
     <nav className="navbar " >
       <img src={logo} alt="" className=' my-8' />
-      <div className="toggle-buttons">
+      <div className="toggle-buttons ">
         <button
           className={`toggle-btn ${active === 'home' ? 'active' : ''}`}
           onClick={() => togglePage('home')}
         >
-         الرئيسية
+            <p className='font-bold text-[21px]'>
+            الرئيسية
+            </p>
+         
         </button>
         <button
           className={`toggle-btn ${active === 'recommendations' ? 'active' : ''}`}
           onClick={() => togglePage('recommendations')}
         >
+          <p className='font-bold text-[21px]'>
           احصل على التوصيات
+
+            </p>
         </button>
       </div>
       <img src={logout} alt="" className='logout' />
