@@ -4,24 +4,24 @@ import star from '../../../public/icons/Star.svg';
 import MainCard from './MainCard';
 
 function Recommendations() {
-    const [data, setData] = useState([]); // State to store fetched data
-    const [loading, setLoading] = useState(true); // State to manage loading state
+    const [data, setData] = useState([]); 
+    const [loading, setLoading] = useState(false); 
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('http://localhost:5000/api/recommendations'); 
-                const result = await response.json();
-                setData(result); 
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await fetch('http://localhost:5000/api/recommendations'); 
+    //             const result = await response.json();
+    //             setData(result); 
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //         } finally {
+    //             setLoading(false);
+    //         }
+    //     };
 
-        fetchData();
-    }, []);
+    //     fetchData();
+    // }, []);
 
     if (loading) {
         return <div>Loading...</div>; 
@@ -75,6 +75,7 @@ function Recommendations() {
                                 score={item.score} 
                                 URL={item.URL} 
                                 title={item.title} 
+                                id={4556}
                             />
                            
                         </div>

@@ -101,6 +101,7 @@ function Filter() {
                                 score={item.score} 
                                 URL={item.URL} 
                                 title={item.title} 
+                                id={456}
                             />
                       
                     ))}

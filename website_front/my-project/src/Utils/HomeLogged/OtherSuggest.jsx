@@ -38,6 +38,7 @@ function OtherSuggest() {
                                 score={item.score} 
                                 URL={item.URL} 
                                 title={item.title} 
+                                id={1234}
                             />
                            
                         </div>
